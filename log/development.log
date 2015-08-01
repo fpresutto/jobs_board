@@ -1,0 +1,1906 @@
+
+
+Started GET "/" for ::1 at 2015-05-08 08:20:58 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/fredypresutto/.rvm/gems/ruby-2.2-head@global/gems/railties-4.2.1/lib/rails/templates/rails/welcome/index.html.erb (3.4ms)
+Completed 200 OK in 26ms (Views: 14.4ms | ActiveRecord: 0.0ms)
+  [1m[36m (1.5ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.4ms)[0m  select sqlite_version(*)
+  [1m[36m (3.2ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateJobs (20150508122317)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  CREATE TABLE "jobs" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "description" text, "company" varchar, "url" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150508122317"]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/" for ::1 at 2015-05-08 08:36:18 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by JobsController#index as HTML
+  Rendered jobs/index.html.haml within layouts/application (4.4ms)
+Completed 200 OK in 5160ms (Views: 5150.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-05-08 08:36:23 -0400
+Processing by JobsController#index as HTML
+  Rendered jobs/index.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 152ms (Views: 151.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jobs.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-08 08:36:24 -0400
+
+
+Started GET "/assets/application.self-a38db50c6440c54eda47f2792dd3f0c307c3ed4c64b41c0cc694c4555a62aabb.css?body=1" for ::1 at 2015-05-08 08:36:24 -0400
+
+
+Started GET "/assets/jobs.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-08 08:36:24 -0400
+
+
+Started GET "/jobs/new" for ::1 at 2015-05-08 08:49:26 -0400
+Processing by JobsController#new as HTML
+  Rendered jobs/_form.html.haml (128.8ms)
+  Rendered jobs/new.html.haml within layouts/application (135.8ms)
+Completed 200 OK in 274ms (Views: 263.9ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/jobs" for ::1 at 2015-05-08 08:52:47 -0400
+Processing by JobsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"isShEZSUlL0fY9YsYb6OF1qwQn7AYjE9ojSBtYpdQdibgoMNeZd5FBEtQCpIheYlmeC++afcqD3rT2IAf2mk1A==", "job"=>{"title"=>"S.D", "description"=>"D.S", "company"=>"Acid", "url"=>"acid.io"}, "commit"=>"Create Job"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "jobs" ("title", "description", "company", "url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "S.D"], ["description", "D.S"], ["company", "Acid"], ["url", "acid.io"], ["created_at", "2015-05-08 12:52:47.801594"], ["updated_at", "2015-05-08 12:52:47.801594"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+Redirected to http://localhost:3000/jobs/1
+Completed 302 Found in 11ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/jobs/1" for ::1 at 2015-05-08 08:52:47 -0400
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mJob Load (0.2ms)[0m  [1mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered jobs/show.html.haml within layouts/application (1.5ms)
+Completed 200 OK in 167ms (Views: 154.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/jobs/1" for ::1 at 2015-05-08 08:53:34 -0400
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mJob Load (0.1ms)[0m  SELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered jobs/show.html.haml within layouts/application (1.5ms)
+Completed 200 OK in 119ms (Views: 117.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.self-a38db50c6440c54eda47f2792dd3f0c307c3ed4c64b41c0cc694c4555a62aabb.css?body=1" for ::1 at 2015-05-08 08:53:35 -0400
+
+
+Started GET "/assets/jobs.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-08 08:53:35 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-08 08:53:35 -0400
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-08 08:53:35 -0400
+
+
+Started GET "/assets/bootstrap/alert.self-15ce09eba576e56db3edfd87accc0ff48823df915169e350b4fd97290f96aee1.js?body=1" for ::1 at 2015-05-08 08:53:35 -0400
+
+
+Started GET "/assets/bootstrap/affix.self-68d1a5161d04ca9fe1b9d9f4114d9426c7798bf90f2703a97aca35c8113469bb.js?body=1" for ::1 at 2015-05-08 08:53:35 -0400
+
+
+Started GET "/assets/bootstrap/button.self-37c62bff1d75f86f3348b8679873d5156d8b9938b62841038dca21690f4740f1.js?body=1" for ::1 at 2015-05-08 08:53:35 -0400
+
+
+Started GET "/assets/bootstrap/carousel.self-9aaab1a477b9c1156bab751cb8da47f77dace6da88eef8ae830e60f3cff3a8be.js?body=1" for ::1 at 2015-05-08 08:53:35 -0400
+
+
+Started GET "/assets/bootstrap/collapse.self-eeece00cd06a3d7cc071ab7845b549d4991edd0f0895e4be70fe40bac2fb5f4b.js?body=1" for ::1 at 2015-05-08 08:53:35 -0400
+
+
+Started GET "/assets/bootstrap/dropdown.self-a3998e7ca949c04cb86b5c635deb0abcc7a24dc02e81be66b8acfef02d811e45.js?body=1" for ::1 at 2015-05-08 08:53:35 -0400
+
+
+Started GET "/assets/bootstrap/modal.self-f2759e138605770e60526c00c6d86cbb3378da203641f9d6b204c9f0192b9267.js?body=1" for ::1 at 2015-05-08 08:53:35 -0400
+
+
+Started GET "/assets/bootstrap/scrollspy.self-5ea180afe4404f83fc97d997833f2edefd34475b0b5ddab310e27abc2bbd5f2f.js?body=1" for ::1 at 2015-05-08 08:53:35 -0400
+
+
+Started GET "/assets/bootstrap/transition.self-7742dca5e6acf313fbb217811b48468282cddf1a9baea5c89ec92e367ef242cb.js?body=1" for ::1 at 2015-05-08 08:53:35 -0400
+
+
+Started GET "/assets/bootstrap/tooltip.self-c3b5c16f394ab9c0391db4431aac4f2d2ddf1bba4c5d3228ed343de05ecc8e83.js?body=1" for ::1 at 2015-05-08 08:53:35 -0400
+
+
+Started GET "/assets/bootstrap/tab.self-e1bba7115c90301056ee94c4716de2fcbe4498015def2dab9ff9879f339bd245.js?body=1" for ::1 at 2015-05-08 08:53:35 -0400
+
+
+Started GET "/assets/bootstrap/popover.self-2674d99c3ab0415dba0b958a80b3840f70ff6368b155d890306c0291be49453b.js?body=1" for ::1 at 2015-05-08 08:53:35 -0400
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-05-08 08:53:35 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-05-08 08:53:35 -0400
+
+
+Started GET "/assets/jobs.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-08 08:53:35 -0400
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2015-05-08 08:53:35 -0400
+
+
+Started GET "/" for ::1 at 2015-05-08 08:53:37 -0400
+Processing by JobsController#index as HTML
+  Rendered jobs/index.html.haml within layouts/application (1.0ms)
+Completed 200 OK in 81ms (Views: 80.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-05-08 08:55:40 -0400
+Processing by JobsController#index as HTML
+  [1m[36mJob Load (0.3ms)[0m  [1mSELECT "jobs".* FROM "jobs"  ORDER BY created_at DESC[0m
+  Rendered jobs/index.html.haml within layouts/application (7.1ms)
+Completed 200 OK in 92ms (Views: 89.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2015-05-08 08:56:40 -0400
+Processing by JobsController#index as HTML
+  [1m[35mJob Load (0.2ms)[0m  SELECT "jobs".* FROM "jobs"  ORDER BY created_at DESC
+  Rendered jobs/index.html.haml within layouts/application (1.7ms)
+Completed 200 OK in 92ms (Views: 91.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/jobs.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-08 08:56:41 -0400
+
+
+Started GET "/assets/application.self-a38db50c6440c54eda47f2792dd3f0c307c3ed4c64b41c0cc694c4555a62aabb.css?body=1" for ::1 at 2015-05-08 08:56:41 -0400
+
+
+Started GET "/assets/bootstrap/affix.self-68d1a5161d04ca9fe1b9d9f4114d9426c7798bf90f2703a97aca35c8113469bb.js?body=1" for ::1 at 2015-05-08 08:56:41 -0400
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-08 08:56:41 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-08 08:56:41 -0400
+
+
+Started GET "/assets/bootstrap/alert.self-15ce09eba576e56db3edfd87accc0ff48823df915169e350b4fd97290f96aee1.js?body=1" for ::1 at 2015-05-08 08:56:41 -0400
+
+
+Started GET "/assets/bootstrap/button.self-37c62bff1d75f86f3348b8679873d5156d8b9938b62841038dca21690f4740f1.js?body=1" for ::1 at 2015-05-08 08:56:41 -0400
+
+
+Started GET "/assets/bootstrap/carousel.self-9aaab1a477b9c1156bab751cb8da47f77dace6da88eef8ae830e60f3cff3a8be.js?body=1" for ::1 at 2015-05-08 08:56:41 -0400
+
+
+Started GET "/assets/bootstrap/collapse.self-eeece00cd06a3d7cc071ab7845b549d4991edd0f0895e4be70fe40bac2fb5f4b.js?body=1" for ::1 at 2015-05-08 08:56:41 -0400
+
+
+Started GET "/assets/bootstrap/dropdown.self-a3998e7ca949c04cb86b5c635deb0abcc7a24dc02e81be66b8acfef02d811e45.js?body=1" for ::1 at 2015-05-08 08:56:41 -0400
+
+
+Started GET "/assets/bootstrap/modal.self-f2759e138605770e60526c00c6d86cbb3378da203641f9d6b204c9f0192b9267.js?body=1" for ::1 at 2015-05-08 08:56:41 -0400
+
+
+Started GET "/assets/bootstrap/scrollspy.self-5ea180afe4404f83fc97d997833f2edefd34475b0b5ddab310e27abc2bbd5f2f.js?body=1" for ::1 at 2015-05-08 08:56:41 -0400
+
+
+Started GET "/assets/bootstrap/tab.self-e1bba7115c90301056ee94c4716de2fcbe4498015def2dab9ff9879f339bd245.js?body=1" for ::1 at 2015-05-08 08:56:41 -0400
+
+
+Started GET "/assets/bootstrap/transition.self-7742dca5e6acf313fbb217811b48468282cddf1a9baea5c89ec92e367ef242cb.js?body=1" for ::1 at 2015-05-08 08:56:41 -0400
+
+
+Started GET "/assets/bootstrap/tooltip.self-c3b5c16f394ab9c0391db4431aac4f2d2ddf1bba4c5d3228ed343de05ecc8e83.js?body=1" for ::1 at 2015-05-08 08:56:41 -0400
+
+
+Started GET "/assets/bootstrap/popover.self-2674d99c3ab0415dba0b958a80b3840f70ff6368b155d890306c0291be49453b.js?body=1" for ::1 at 2015-05-08 08:56:41 -0400
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-05-08 08:56:41 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-05-08 08:56:41 -0400
+
+
+Started GET "/assets/jobs.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-08 08:56:41 -0400
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2015-05-08 08:56:41 -0400
+
+
+Started GET "/jobs/new" for ::1 at 2015-05-08 08:56:58 -0400
+Processing by JobsController#new as HTML
+  Rendered jobs/_form.html.haml (88.0ms)
+  Rendered jobs/new.html.haml within layouts/application (92.1ms)
+Completed 200 OK in 187ms (Views: 186.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/jobs" for ::1 at 2015-05-08 08:57:09 -0400
+Processing by JobsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"oKPm65g6r4ss4q8xoSi3unwPLyj4IaLm07U+h/0bGZSx5cT3dTlCIiKsOTeIE9+Iv1/Tr5+fO+aazt0yCC/8mA==", "job"=>{"title"=>"JD", "description"=>"DJ", "company"=>"Accra", "url"=>"accra"}, "commit"=>"Create Job"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "jobs" ("title", "description", "company", "url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "JD"], ["description", "DJ"], ["company", "Accra"], ["url", "accra"], ["created_at", "2015-05-08 12:57:09.318337"], ["updated_at", "2015-05-08 12:57:09.318337"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/jobs/2
+Completed 302 Found in 5ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/jobs/2" for ::1 at 2015-05-08 08:57:09 -0400
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mJob Load (0.2ms)[0m  SELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered jobs/show.html.haml within layouts/application (0.4ms)
+Completed 200 OK in 125ms (Views: 123.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2015-05-08 09:24:22 -0400
+Processing by JobsController#index as HTML
+  [1m[36mJob Load (0.3ms)[0m  [1mSELECT "jobs".* FROM "jobs"  ORDER BY created_at DESC[0m
+  Rendered jobs/index.html.haml within layouts/application (43.7ms)
+Completed 500 Internal Server Error in 50ms (ActiveRecord: 0.8ms)
+
+ActionView::Template::Error (undefined local variable or method `new_job_pathw' for #<#<Class:0x007f809e4e2e58>:0x007f809e4e14b8>):
+    2: 	%h2= link_to job.title, job
+    3: 	%p= job.company
+    4: 
+    5: 	= link_to "New Job", new_job_pathw
+  app/views/jobs/index.html.haml:5:in `block in _app_views_jobs_index_html_haml__632155477435074438_70095194215000'
+  app/views/jobs/index.html.haml:1:in `_app_views_jobs_index_html_haml__632155477435074438_70095194215000'
+
+
+  Rendered /Users/fredypresutto/.rvm/gems/ruby-2.2-head@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.8ms)
+  Rendered /Users/fredypresutto/.rvm/gems/ruby-2.2-head@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /Users/fredypresutto/.rvm/gems/ruby-2.2-head@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/fredypresutto/.rvm/gems/ruby-2.2-head@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (84.5ms)
+  Rendered /Users/fredypresutto/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/fredypresutto/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/fredypresutto/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/fredypresutto/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/fredypresutto/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (70.5ms)
+  Rendered /Users/fredypresutto/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/fredypresutto/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/fredypresutto/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (139.6ms)
+
+
+Started GET "/" for ::1 at 2015-05-08 09:24:23 -0400
+Processing by JobsController#index as HTML
+  [1m[35mJob Load (0.2ms)[0m  SELECT "jobs".* FROM "jobs"  ORDER BY created_at DESC
+  Rendered jobs/index.html.haml within layouts/application (15.8ms)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.2ms)
+
+ActionView::Template::Error (undefined local variable or method `new_job_pathw' for #<#<Class:0x007f809e4e2e58>:0x007f80a1462c78>):
+    2: 	%h2= link_to job.title, job
+    3: 	%p= job.company
+    4: 
+    5: 	= link_to "New Job", new_job_pathw
+  app/views/jobs/index.html.haml:5:in `block in _app_views_jobs_index_html_haml__632155477435074438_70095219133700'
+  app/views/jobs/index.html.haml:1:in `_app_views_jobs_index_html_haml__632155477435074438_70095219133700'
+
+
+  Rendered /Users/fredypresutto/.rvm/gems/ruby-2.2-head@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.0ms)
+  Rendered /Users/fredypresutto/.rvm/gems/ruby-2.2-head@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Users/fredypresutto/.rvm/gems/ruby-2.2-head@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/fredypresutto/.rvm/gems/ruby-2.2-head@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (75.4ms)
+  Rendered /Users/fredypresutto/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/fredypresutto/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/fredypresutto/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/fredypresutto/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/fredypresutto/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (54.5ms)
+  Rendered /Users/fredypresutto/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/fredypresutto/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/fredypresutto/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (126.2ms)
+
+
+Started GET "/" for ::1 at 2015-05-08 09:24:38 -0400
+Processing by JobsController#index as HTML
+  [1m[36mJob Load (0.2ms)[0m  [1mSELECT "jobs".* FROM "jobs"  ORDER BY created_at DESC[0m
+  Rendered jobs/index.html.haml within layouts/application (2.9ms)
+Completed 200 OK in 111ms (Views: 110.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/jobs.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-08 09:24:38 -0400
+
+
+Started GET "/assets/application.self-a38db50c6440c54eda47f2792dd3f0c307c3ed4c64b41c0cc694c4555a62aabb.css?body=1" for ::1 at 2015-05-08 09:24:38 -0400
+
+
+Started GET "/assets/bootstrap/alert.self-15ce09eba576e56db3edfd87accc0ff48823df915169e350b4fd97290f96aee1.js?body=1" for ::1 at 2015-05-08 09:24:38 -0400
+
+
+Started GET "/assets/bootstrap/affix.self-68d1a5161d04ca9fe1b9d9f4114d9426c7798bf90f2703a97aca35c8113469bb.js?body=1" for ::1 at 2015-05-08 09:24:38 -0400
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-08 09:24:38 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-08 09:24:38 -0400
+
+
+Started GET "/assets/bootstrap/button.self-37c62bff1d75f86f3348b8679873d5156d8b9938b62841038dca21690f4740f1.js?body=1" for ::1 at 2015-05-08 09:24:38 -0400
+
+
+Started GET "/assets/bootstrap/carousel.self-9aaab1a477b9c1156bab751cb8da47f77dace6da88eef8ae830e60f3cff3a8be.js?body=1" for ::1 at 2015-05-08 09:24:38 -0400
+
+
+Started GET "/assets/bootstrap/collapse.self-eeece00cd06a3d7cc071ab7845b549d4991edd0f0895e4be70fe40bac2fb5f4b.js?body=1" for ::1 at 2015-05-08 09:24:38 -0400
+
+
+Started GET "/assets/bootstrap/dropdown.self-a3998e7ca949c04cb86b5c635deb0abcc7a24dc02e81be66b8acfef02d811e45.js?body=1" for ::1 at 2015-05-08 09:24:38 -0400
+
+
+Started GET "/assets/bootstrap/modal.self-f2759e138605770e60526c00c6d86cbb3378da203641f9d6b204c9f0192b9267.js?body=1" for ::1 at 2015-05-08 09:24:38 -0400
+
+
+Started GET "/assets/bootstrap/scrollspy.self-5ea180afe4404f83fc97d997833f2edefd34475b0b5ddab310e27abc2bbd5f2f.js?body=1" for ::1 at 2015-05-08 09:24:38 -0400
+
+
+Started GET "/assets/bootstrap/tab.self-e1bba7115c90301056ee94c4716de2fcbe4498015def2dab9ff9879f339bd245.js?body=1" for ::1 at 2015-05-08 09:24:38 -0400
+
+
+Started GET "/assets/bootstrap/transition.self-7742dca5e6acf313fbb217811b48468282cddf1a9baea5c89ec92e367ef242cb.js?body=1" for ::1 at 2015-05-08 09:24:38 -0400
+
+
+Started GET "/assets/bootstrap/tooltip.self-c3b5c16f394ab9c0391db4431aac4f2d2ddf1bba4c5d3228ed343de05ecc8e83.js?body=1" for ::1 at 2015-05-08 09:24:38 -0400
+
+
+Started GET "/assets/bootstrap/popover.self-2674d99c3ab0415dba0b958a80b3840f70ff6368b155d890306c0291be49453b.js?body=1" for ::1 at 2015-05-08 09:24:38 -0400
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-05-08 09:24:38 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-05-08 09:24:38 -0400
+
+
+Started GET "/assets/jobs.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-08 09:24:38 -0400
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2015-05-08 09:24:38 -0400
+
+
+Started GET "/jobs/1" for ::1 at 2015-05-08 09:24:40 -0400
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mJob Load (0.3ms)[0m  SELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered jobs/show.html.haml within layouts/application (1.7ms)
+Completed 200 OK in 116ms (Views: 113.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2015-05-08 09:24:42 -0400
+Processing by JobsController#index as HTML
+  [1m[36mJob Load (0.3ms)[0m  [1mSELECT "jobs".* FROM "jobs"  ORDER BY created_at DESC[0m
+  Rendered jobs/index.html.haml within layouts/application (4.1ms)
+Completed 200 OK in 109ms (Views: 108.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/jobs/1" for ::1 at 2015-05-08 09:24:55 -0400
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mJob Load (0.1ms)[0m  SELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered jobs/show.html.haml within layouts/application (0.5ms)
+Completed 200 OK in 92ms (Views: 91.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/jobs/1/edit" for ::1 at 2015-05-08 09:26:51 -0400
+Processing by JobsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mJob Load (0.2ms)[0m  [1mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered jobs/_form.html.haml (66.9ms)
+  Rendered jobs/edit.html.haml within layouts/application (70.3ms)
+Completed 200 OK in 167ms (Views: 165.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2015-05-08 09:28:58 -0400
+Processing by JobsController#index as HTML
+  [1m[35mJob Load (0.3ms)[0m  SELECT "jobs".* FROM "jobs"  ORDER BY created_at DESC
+  Rendered jobs/index.html.haml within layouts/application (1.8ms)
+Completed 200 OK in 141ms (Views: 140.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/jobs/2" for ::1 at 2015-05-08 09:29:01 -0400
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mJob Load (0.1ms)[0m  [1mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered jobs/show.html.haml within layouts/application (1.9ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.1ms)
+
+SyntaxError (/Users/fredypresutto/Documents/Rails/jobs_board/app/views/jobs/show.html.haml:7: syntax error, unexpected '{', expecting =>
+...@job), method: :delete, :data { confirm: "Are you sure?" }
+...                               ^
+/Users/fredypresutto/Documents/Rails/jobs_board/app/views/jobs/show.html.haml:7: syntax error, unexpected '}', expecting ')'
+/Users/fredypresutto/Documents/Rails/jobs_board/app/views/jobs/show.html.haml:8: unterminated string meets end of file
+/Users/fredypresutto/Documents/Rails/jobs_board/app/views/jobs/show.html.haml:8: syntax error, unexpected end-of-input, expecting ')'):
+  app/views/jobs/show.html.haml:7: syntax error, unexpected '{', expecting =>
+  app/views/jobs/show.html.haml:7: syntax error, unexpected '}', expecting ')'
+  app/views/jobs/show.html.haml:8: unterminated string meets end of file
+  app/views/jobs/show.html.haml:8: syntax error, unexpected end-of-input, expecting ')'
+
+
+  Rendered /Users/fredypresutto/.rvm/gems/ruby-2.2-head@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.4ms)
+  Rendered /Users/fredypresutto/.rvm/gems/ruby-2.2-head@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.8ms)
+  Rendered /Users/fredypresutto/.rvm/gems/ruby-2.2-head@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/fredypresutto/.rvm/gems/ruby-2.2-head@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (94.0ms)
+  Rendered /Users/fredypresutto/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/fredypresutto/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/fredypresutto/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/fredypresutto/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/fredypresutto/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (55.2ms)
+  Rendered /Users/fredypresutto/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/fredypresutto/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/fredypresutto/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (111.9ms)
+
+
+Started GET "/jobs/2" for ::1 at 2015-05-08 09:29:02 -0400
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mJob Load (0.1ms)[0m  SELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered jobs/show.html.haml within layouts/application (1.6ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.1ms)
+
+SyntaxError (/Users/fredypresutto/Documents/Rails/jobs_board/app/views/jobs/show.html.haml:7: syntax error, unexpected '{', expecting =>
+...@job), method: :delete, :data { confirm: "Are you sure?" }
+...                               ^
+/Users/fredypresutto/Documents/Rails/jobs_board/app/views/jobs/show.html.haml:7: syntax error, unexpected '}', expecting ')'
+/Users/fredypresutto/Documents/Rails/jobs_board/app/views/jobs/show.html.haml:8: unterminated string meets end of file
+/Users/fredypresutto/Documents/Rails/jobs_board/app/views/jobs/show.html.haml:8: syntax error, unexpected end-of-input, expecting ')'):
+  app/views/jobs/show.html.haml:7: syntax error, unexpected '{', expecting =>
+  app/views/jobs/show.html.haml:7: syntax error, unexpected '}', expecting ')'
+  app/views/jobs/show.html.haml:8: unterminated string meets end of file
+  app/views/jobs/show.html.haml:8: syntax error, unexpected end-of-input, expecting ')'
+
+
+  Rendered /Users/fredypresutto/.rvm/gems/ruby-2.2-head@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.6ms)
+  Rendered /Users/fredypresutto/.rvm/gems/ruby-2.2-head@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendered /Users/fredypresutto/.rvm/gems/ruby-2.2-head@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/fredypresutto/.rvm/gems/ruby-2.2-head@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (76.5ms)
+  Rendered /Users/fredypresutto/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/fredypresutto/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/fredypresutto/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/fredypresutto/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/fredypresutto/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (54.8ms)
+  Rendered /Users/fredypresutto/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/fredypresutto/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/fredypresutto/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (128.1ms)
+
+
+Started GET "/jobs/2" for ::1 at 2015-05-08 09:29:18 -0400
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mJob Load (0.1ms)[0m  [1mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered jobs/show.html.haml within layouts/application (1.6ms)
+Completed 200 OK in 97ms (Views: 95.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/jobs.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-08 09:29:18 -0400
+
+
+Started GET "/assets/application.self-a38db50c6440c54eda47f2792dd3f0c307c3ed4c64b41c0cc694c4555a62aabb.css?body=1" for ::1 at 2015-05-08 09:29:19 -0400
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-08 09:29:19 -0400
+
+
+Started GET "/assets/bootstrap/alert.self-15ce09eba576e56db3edfd87accc0ff48823df915169e350b4fd97290f96aee1.js?body=1" for ::1 at 2015-05-08 09:29:19 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-08 09:29:19 -0400
+
+
+Started GET "/assets/bootstrap/affix.self-68d1a5161d04ca9fe1b9d9f4114d9426c7798bf90f2703a97aca35c8113469bb.js?body=1" for ::1 at 2015-05-08 09:29:19 -0400
+
+
+Started GET "/assets/bootstrap/button.self-37c62bff1d75f86f3348b8679873d5156d8b9938b62841038dca21690f4740f1.js?body=1" for ::1 at 2015-05-08 09:29:19 -0400
+
+
+Started GET "/assets/bootstrap/carousel.self-9aaab1a477b9c1156bab751cb8da47f77dace6da88eef8ae830e60f3cff3a8be.js?body=1" for ::1 at 2015-05-08 09:29:19 -0400
+
+
+Started GET "/assets/bootstrap/collapse.self-eeece00cd06a3d7cc071ab7845b549d4991edd0f0895e4be70fe40bac2fb5f4b.js?body=1" for ::1 at 2015-05-08 09:29:19 -0400
+
+
+Started GET "/assets/bootstrap/dropdown.self-a3998e7ca949c04cb86b5c635deb0abcc7a24dc02e81be66b8acfef02d811e45.js?body=1" for ::1 at 2015-05-08 09:29:19 -0400
+
+
+Started GET "/assets/bootstrap/modal.self-f2759e138605770e60526c00c6d86cbb3378da203641f9d6b204c9f0192b9267.js?body=1" for ::1 at 2015-05-08 09:29:19 -0400
+
+
+Started GET "/assets/bootstrap/scrollspy.self-5ea180afe4404f83fc97d997833f2edefd34475b0b5ddab310e27abc2bbd5f2f.js?body=1" for ::1 at 2015-05-08 09:29:19 -0400
+
+
+Started GET "/assets/bootstrap/tab.self-e1bba7115c90301056ee94c4716de2fcbe4498015def2dab9ff9879f339bd245.js?body=1" for ::1 at 2015-05-08 09:29:19 -0400
+
+
+Started GET "/assets/bootstrap/transition.self-7742dca5e6acf313fbb217811b48468282cddf1a9baea5c89ec92e367ef242cb.js?body=1" for ::1 at 2015-05-08 09:29:19 -0400
+
+
+Started GET "/assets/bootstrap/tooltip.self-c3b5c16f394ab9c0391db4431aac4f2d2ddf1bba4c5d3228ed343de05ecc8e83.js?body=1" for ::1 at 2015-05-08 09:29:19 -0400
+
+
+Started GET "/assets/bootstrap/popover.self-2674d99c3ab0415dba0b958a80b3840f70ff6368b155d890306c0291be49453b.js?body=1" for ::1 at 2015-05-08 09:29:19 -0400
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-05-08 09:29:19 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-05-08 09:29:19 -0400
+
+
+Started GET "/assets/jobs.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-08 09:29:19 -0400
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2015-05-08 09:29:19 -0400
+
+
+Started DELETE "/jobs/2" for ::1 at 2015-05-08 09:29:21 -0400
+Processing by JobsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"vUR4hkeOv0rBW0f8cvGUZRk0xJA202qbV3WEonhWb5ysAlqaqo1S488V0fpbyvxX2mQ4F1Ft85seDmcXjWKKkA==", "id"=>"2"}
+  [1m[35mJob Load (0.3ms)[0m  SELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "jobs" WHERE "jobs"."id" = ?  [["id", 2]]
+  [1m[36m (8.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 12ms (ActiveRecord: 8.7ms)
+
+
+Started GET "/" for ::1 at 2015-05-08 09:29:21 -0400
+Processing by JobsController#index as HTML
+  [1m[35mJob Load (0.2ms)[0m  SELECT "jobs".* FROM "jobs"  ORDER BY created_at DESC
+  Rendered jobs/index.html.haml within layouts/application (1.0ms)
+Completed 200 OK in 116ms (Views: 115.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/jobs/new" for ::1 at 2015-05-08 09:29:39 -0400
+Processing by JobsController#new as HTML
+  Rendered jobs/_form.html.haml (85.2ms)
+  Rendered jobs/new.html.haml within layouts/application (88.7ms)
+Completed 200 OK in 204ms (Views: 202.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/jobs" for ::1 at 2015-05-08 09:29:53 -0400
+Processing by JobsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cMcyMa3GFy52/AK181r7t7kCe0HOr9BntyIikJuTYCVhgRAtQMX6h3iylLPaYZOFelKHxqkRSWf+WcElbqeFKQ==", "job"=>{"title"=>"did", "description"=>"done", "company"=>"Ahs", "url"=>"ud.com"}, "commit"=>"Create Job"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "jobs" ("title", "description", "company", "url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "did"], ["description", "done"], ["company", "Ahs"], ["url", "ud.com"], ["created_at", "2015-05-08 13:29:53.763609"], ["updated_at", "2015-05-08 13:29:53.763609"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/jobs/3
+Completed 302 Found in 7ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/jobs/3" for ::1 at 2015-05-08 09:29:53 -0400
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mJob Load (0.3ms)[0m  SELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered jobs/show.html.haml within layouts/application (0.7ms)
+Completed 200 OK in 127ms (Views: 124.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2015-05-08 09:29:56 -0400
+Processing by JobsController#index as HTML
+  [1m[36mJob Load (0.3ms)[0m  [1mSELECT "jobs".* FROM "jobs"  ORDER BY created_at DESC[0m
+  Rendered jobs/index.html.haml within layouts/application (1.6ms)
+Completed 200 OK in 96ms (Views: 95.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/jobs/new" for ::1 at 2015-05-08 09:29:57 -0400
+Processing by JobsController#new as HTML
+  Rendered jobs/_form.html.haml (81.2ms)
+  Rendered jobs/new.html.haml within layouts/application (83.2ms)
+Completed 200 OK in 177ms (Views: 176.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/jobs" for ::1 at 2015-05-08 09:30:08 -0400
+Processing by JobsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JbTFsWH9vvbrzTwMhhbW2En/QotQy9BavVJKabbFXvE08uetjP5TX+WDqgqvLb7qiq++DDd1SVr0KancQ/G7/Q==", "job"=>{"title"=>"lnd", "description"=>"nd", "company"=>"idf", "url"=>".ral"}, "commit"=>"Create Job"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "jobs" ("title", "description", "company", "url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "lnd"], ["description", "nd"], ["company", "idf"], ["url", ".ral"], ["created_at", "2015-05-08 13:30:08.690283"], ["updated_at", "2015-05-08 13:30:08.690283"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/jobs/4
+Completed 302 Found in 5ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/jobs/4" for ::1 at 2015-05-08 09:30:08 -0400
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mJob Load (0.1ms)[0m  [1mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered jobs/show.html.haml within layouts/application (0.5ms)
+Completed 200 OK in 144ms (Views: 143.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2015-05-08 09:30:11 -0400
+Processing by JobsController#index as HTML
+  [1m[35mJob Load (0.2ms)[0m  SELECT "jobs".* FROM "jobs"  ORDER BY created_at DESC
+  Rendered jobs/index.html.haml within layouts/application (1.7ms)
+Completed 200 OK in 140ms (Views: 139.6ms | ActiveRecord: 0.2ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateCategories (20150508133629)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mCREATE TABLE "categories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150508133629"]]
+  [1m[36m (8.6ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)  [["name", "Full Time"], ["created_at", "2015-05-08 13:42:21.168982"], ["updated_at", "2015-05-08 13:42:21.168982"]]
+  [1m[36m (8.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Part Time"], ["created_at", "2015-05-08 13:42:43.425965"], ["updated_at", "2015-05-08 13:42:43.425965"]]
+  [1m[35m (9.1ms)[0m  commit transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)  [["name", "Freelance"], ["created_at", "2015-05-08 13:43:03.230705"], ["updated_at", "2015-05-08 13:43:03.230705"]]
+  [1m[36m (8.7ms)[0m  [1mcommit transaction[0m
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)  [["name", "Consulting"], ["created_at", "2015-05-08 13:48:19.537360"], ["updated_at", "2015-05-08 13:48:19.537360"]]
+  [1m[36m (9.2ms)[0m  [1mcommit transaction[0m
+  [1m[35mCategory Load (0.3ms)[0m  SELECT "categories".* FROM "categories"
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mJob Load (0.2ms)[0m  [1mSELECT  "jobs".* FROM "jobs"  ORDER BY "jobs"."id" ASC LIMIT 1[0m
+  [1m[35mJob Load (0.5ms)[0m  SELECT  "jobs".* FROM "jobs"  ORDER BY "jobs"."id" ASC LIMIT 1
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT  "categories".* FROM "categories"  ORDER BY "categories"."id" ASC LIMIT 1[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddCategoryIdToJobs (20150508141555)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150508141555"]]
+  [1m[35m (8.6ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mJob Load (0.4ms)[0m  [1mSELECT  "jobs".* FROM "jobs"  ORDER BY "jobs"."id" ASC LIMIT 1[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20150508141555"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddCategoryIdToJobs (20150508141555)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (8.4ms)[0m  [1mALTER TABLE "jobs" ADD "category_id" integer[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150508141555"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mJob Load (0.2ms)[0m  [1mSELECT  "jobs".* FROM "jobs"  ORDER BY "jobs"."id" ASC LIMIT 1[0m
+
+
+Started GET "/jobs/new" for ::1 at 2015-05-08 10:24:54 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by JobsController#new as HTML
+  [1m[35mCategory Load (0.3ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered jobs/_form.html.haml (137.6ms)
+  Rendered jobs/new.html.haml within layouts/application (140.2ms)
+Completed 200 OK in 269ms (Views: 256.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/jobs/new" for ::1 at 2015-05-08 10:26:05 -0400
+Processing by JobsController#new as HTML
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered jobs/_form.html.haml (73.6ms)
+  Rendered jobs/new.html.haml within layouts/application (75.5ms)
+Completed 200 OK in 181ms (Views: 171.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/jobs.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-08 10:26:05 -0400
+
+
+Started GET "/assets/bootstrap/alert.self-15ce09eba576e56db3edfd87accc0ff48823df915169e350b4fd97290f96aee1.js?body=1" for ::1 at 2015-05-08 10:26:05 -0400
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-08 10:26:05 -0400
+
+
+Started GET "/assets/application.self-a38db50c6440c54eda47f2792dd3f0c307c3ed4c64b41c0cc694c4555a62aabb.css?body=1" for ::1 at 2015-05-08 10:26:05 -0400
+
+
+Started GET "/assets/bootstrap/affix.self-68d1a5161d04ca9fe1b9d9f4114d9426c7798bf90f2703a97aca35c8113469bb.js?body=1" for ::1 at 2015-05-08 10:26:06 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-08 10:26:06 -0400
+
+
+Started GET "/assets/bootstrap/button.self-37c62bff1d75f86f3348b8679873d5156d8b9938b62841038dca21690f4740f1.js?body=1" for ::1 at 2015-05-08 10:26:06 -0400
+
+
+Started GET "/assets/bootstrap/carousel.self-9aaab1a477b9c1156bab751cb8da47f77dace6da88eef8ae830e60f3cff3a8be.js?body=1" for ::1 at 2015-05-08 10:26:06 -0400
+
+
+Started GET "/assets/bootstrap/collapse.self-eeece00cd06a3d7cc071ab7845b549d4991edd0f0895e4be70fe40bac2fb5f4b.js?body=1" for ::1 at 2015-05-08 10:26:06 -0400
+
+
+Started GET "/assets/bootstrap/dropdown.self-a3998e7ca949c04cb86b5c635deb0abcc7a24dc02e81be66b8acfef02d811e45.js?body=1" for ::1 at 2015-05-08 10:26:06 -0400
+
+
+Started GET "/assets/bootstrap/modal.self-f2759e138605770e60526c00c6d86cbb3378da203641f9d6b204c9f0192b9267.js?body=1" for ::1 at 2015-05-08 10:26:06 -0400
+
+
+Started GET "/assets/bootstrap/scrollspy.self-5ea180afe4404f83fc97d997833f2edefd34475b0b5ddab310e27abc2bbd5f2f.js?body=1" for ::1 at 2015-05-08 10:26:06 -0400
+
+
+Started GET "/assets/bootstrap/tab.self-e1bba7115c90301056ee94c4716de2fcbe4498015def2dab9ff9879f339bd245.js?body=1" for ::1 at 2015-05-08 10:26:06 -0400
+
+
+Started GET "/assets/bootstrap/transition.self-7742dca5e6acf313fbb217811b48468282cddf1a9baea5c89ec92e367ef242cb.js?body=1" for ::1 at 2015-05-08 10:26:06 -0400
+
+
+Started GET "/assets/bootstrap/tooltip.self-c3b5c16f394ab9c0391db4431aac4f2d2ddf1bba4c5d3228ed343de05ecc8e83.js?body=1" for ::1 at 2015-05-08 10:26:06 -0400
+
+
+Started GET "/assets/bootstrap/popover.self-2674d99c3ab0415dba0b958a80b3840f70ff6368b155d890306c0291be49453b.js?body=1" for ::1 at 2015-05-08 10:26:06 -0400
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-05-08 10:26:06 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-05-08 10:26:06 -0400
+
+
+Started GET "/assets/jobs.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-08 10:26:06 -0400
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2015-05-08 10:26:06 -0400
+
+
+Started POST "/jobs" for ::1 at 2015-05-08 10:26:12 -0400
+Processing by JobsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XzuMvCfV+UX7hNDBJD/AGTglXuNUuGZprA3x7kzw9fNOfa6gytYU7PXKRscNBKgr+3WiZDMG/2nldhJbucQQ/w==", "job"=>{"category_id"=>"1", "title"=>"a", "description"=>"b", "company"=>"c", "url"=>"d"}, "commit"=>"Create Job"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "jobs" ("title", "description", "company", "url", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "a"], ["description", "b"], ["company", "c"], ["url", "d"], ["category_id", 1], ["created_at", "2015-05-08 14:26:12.993322"], ["updated_at", "2015-05-08 14:26:12.993322"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+Redirected to http://localhost:3000/jobs/5
+Completed 302 Found in 7ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/jobs/5" for ::1 at 2015-05-08 10:26:13 -0400
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mJob Load (0.2ms)[0m  [1mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered jobs/show.html.haml within layouts/application (0.6ms)
+Completed 200 OK in 133ms (Views: 131.2ms | ActiveRecord: 0.2ms)
+  [1m[35mJob Load (0.1ms)[0m  SELECT  "jobs".* FROM "jobs"  ORDER BY "jobs"."id" DESC LIMIT 1
+  [1m[36mJob Load (0.2ms)[0m  [1mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT 1[0m  [["id", 2]]
+
+
+Started GET "/" for ::1 at 2015-05-08 10:27:46 -0400
+Processing by JobsController#index as HTML
+  [1m[35mJob Load (0.3ms)[0m  SELECT "jobs".* FROM "jobs"  ORDER BY created_at DESC
+  Rendered jobs/index.html.haml within layouts/application (1.8ms)
+Completed 200 OK in 123ms (Views: 122.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/jobs/5" for ::1 at 2015-05-08 10:28:09 -0400
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mJob Load (0.1ms)[0m  [1mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered jobs/show.html.haml within layouts/application (2.1ms)
+Completed 200 OK in 105ms (Views: 104.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/jobs/5/edit" for ::1 at 2015-05-08 10:28:11 -0400
+Processing by JobsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mJob Load (0.2ms)[0m  SELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered jobs/_form.html.haml (95.4ms)
+  Rendered jobs/edit.html.haml within layouts/application (100.3ms)
+Completed 200 OK in 226ms (Views: 224.4ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/jobs/5" for ::1 at 2015-05-08 10:28:16 -0400
+Processing by JobsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2cZ6eFyvabTUsuHQCMr38RqTsRqvLIIDMSHFncb88mbIgFhksayEHdr8d9Yh8Z/D2cNNnciSGwN4WiYoM8gXag==", "job"=>{"category_id"=>"3", "title"=>"a", "description"=>"b", "company"=>"c", "url"=>"d"}, "commit"=>"Update Job", "id"=>"5"}
+  [1m[35mJob Load (0.1ms)[0m  SELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "jobs" SET "category_id" = ?, "updated_at" = ? WHERE "jobs"."id" = ?  [["category_id", 3], ["updated_at", "2015-05-08 14:28:16.314351"], ["id", 5]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/jobs/5
+Completed 302 Found in 7ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/jobs/5" for ::1 at 2015-05-08 10:28:16 -0400
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mJob Load (0.1ms)[0m  SELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered jobs/show.html.haml within layouts/application (0.8ms)
+Completed 200 OK in 98ms (Views: 96.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2015-05-08 10:28:18 -0400
+Processing by JobsController#index as HTML
+  [1m[36mJob Load (0.2ms)[0m  [1mSELECT "jobs".* FROM "jobs"  ORDER BY created_at DESC[0m
+  Rendered jobs/index.html.haml within layouts/application (1.4ms)
+Completed 200 OK in 114ms (Views: 112.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/jobs/4" for ::1 at 2015-05-08 10:28:19 -0400
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mJob Load (0.1ms)[0m  SELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered jobs/show.html.haml within layouts/application (0.9ms)
+Completed 200 OK in 132ms (Views: 131.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/jobs/4/edit" for ::1 at 2015-05-08 10:28:21 -0400
+Processing by JobsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mJob Load (0.1ms)[0m  [1mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCategory Load (0.2ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered jobs/_form.html.haml (88.1ms)
+  Rendered jobs/edit.html.haml within layouts/application (91.2ms)
+Completed 200 OK in 201ms (Views: 199.4ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/jobs/4" for ::1 at 2015-05-08 10:28:26 -0400
+Processing by JobsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pQhCIdGWuKLXpyN+Mfri2BE88e51psi4NZHX5AUONFS0TmA9PJVVC9nptXgYwYrq0mwNaRIYUbh86jRR8DrRWA==", "job"=>{"category_id"=>"3", "title"=>"lnd", "description"=>"nd", "company"=>"idf", "url"=>".ral"}, "commit"=>"Update Job", "id"=>"4"}
+  [1m[36mJob Load (0.1ms)[0m  [1mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "jobs" SET "category_id" = ?, "updated_at" = ? WHERE "jobs"."id" = ?[0m  [["category_id", 3], ["updated_at", "2015-05-08 14:28:26.229669"], ["id", 4]]
+  [1m[35m (1.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/jobs/4
+Completed 302 Found in 6ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/jobs/4" for ::1 at 2015-05-08 10:28:26 -0400
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mJob Load (0.1ms)[0m  [1mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered jobs/show.html.haml within layouts/application (0.8ms)
+Completed 200 OK in 121ms (Views: 119.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2015-05-08 10:28:28 -0400
+Processing by JobsController#index as HTML
+  [1m[35mJob Load (0.2ms)[0m  SELECT "jobs".* FROM "jobs"  ORDER BY created_at DESC
+  Rendered jobs/index.html.haml within layouts/application (1.9ms)
+Completed 200 OK in 94ms (Views: 92.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/jobs/3" for ::1 at 2015-05-08 10:28:29 -0400
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mJob Load (0.1ms)[0m  [1mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered jobs/show.html.haml within layouts/application (0.9ms)
+Completed 200 OK in 96ms (Views: 95.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/jobs/3/edit" for ::1 at 2015-05-08 10:28:31 -0400
+Processing by JobsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mJob Load (0.1ms)[0m  SELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered jobs/_form.html.haml (78.8ms)
+  Rendered jobs/edit.html.haml within layouts/application (80.9ms)
+Completed 200 OK in 212ms (Views: 210.6ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/jobs/3" for ::1 at 2015-05-08 10:28:35 -0400
+Processing by JobsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9948HouxkLXaWqRdmbZLTS7RZpl14rtfwdMUPV7xaazmmB4CZrJ9HNQUMluwjSN/7YGaHhJcIl+IqPeIq8WMoA==", "job"=>{"category_id"=>"4", "title"=>"did", "description"=>"done", "company"=>"Ahs", "url"=>"ud.com"}, "commit"=>"Update Job", "id"=>"3"}
+  [1m[35mJob Load (0.2ms)[0m  SELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "jobs" SET "category_id" = ?, "updated_at" = ? WHERE "jobs"."id" = ?  [["category_id", 4], ["updated_at", "2015-05-08 14:28:35.999646"], ["id", 3]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/jobs/3
+Completed 302 Found in 6ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/jobs/3" for ::1 at 2015-05-08 10:28:36 -0400
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mJob Load (0.1ms)[0m  SELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered jobs/show.html.haml within layouts/application (0.5ms)
+Completed 200 OK in 132ms (Views: 130.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2015-05-08 10:28:37 -0400
+Processing by JobsController#index as HTML
+  [1m[36mJob Load (0.3ms)[0m  [1mSELECT "jobs".* FROM "jobs"  ORDER BY created_at DESC[0m
+  Rendered jobs/index.html.haml within layouts/application (2.2ms)
+Completed 200 OK in 98ms (Views: 97.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/jobs/1" for ::1 at 2015-05-08 10:28:39 -0400
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mJob Load (0.1ms)[0m  SELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered jobs/show.html.haml within layouts/application (0.7ms)
+Completed 200 OK in 111ms (Views: 109.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/jobs/1/edit" for ::1 at 2015-05-08 10:28:41 -0400
+Processing by JobsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mJob Load (0.1ms)[0m  [1mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCategory Load (0.2ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered jobs/_form.html.haml (73.5ms)
+  Rendered jobs/edit.html.haml within layouts/application (75.7ms)
+Completed 200 OK in 175ms (Views: 174.0ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/jobs/1" for ::1 at 2015-05-08 10:28:46 -0400
+Processing by JobsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tSlTkGx9fWGZ2FEC+6zZdHFzN+c+3ar9vlDV799v0tekb3GMgX6QyJeWxwTSl7FGsiPLYFljM/33KzZaKls32w==", "job"=>{"category_id"=>"1", "title"=>"S.D", "description"=>"D.S", "company"=>"Acid", "url"=>"acid.io"}, "commit"=>"Update Job", "id"=>"1"}
+  [1m[36mJob Load (0.2ms)[0m  [1mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "jobs" SET "category_id" = ?, "updated_at" = ? WHERE "jobs"."id" = ?[0m  [["category_id", 1], ["updated_at", "2015-05-08 14:28:46.590555"], ["id", 1]]
+  [1m[35m (0.8ms)[0m  commit transaction
+Redirected to http://localhost:3000/jobs/1
+Completed 302 Found in 8ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/jobs/1" for ::1 at 2015-05-08 10:28:46 -0400
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mJob Load (0.2ms)[0m  [1mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered jobs/show.html.haml within layouts/application (0.5ms)
+Completed 200 OK in 101ms (Views: 99.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2015-05-08 10:28:49 -0400
+Processing by JobsController#index as HTML
+  [1m[35mJob Load (0.2ms)[0m  SELECT "jobs".* FROM "jobs"  ORDER BY created_at DESC
+  Rendered jobs/index.html.haml within layouts/application (1.5ms)
+Completed 200 OK in 102ms (Views: 101.1ms | ActiveRecord: 0.2ms)
+  [1m[35mJob Load (0.2ms)[0m  SELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT 1  [["id", 2]]
+
+
+Started GET "/" for ::1 at 2015-05-08 10:37:07 -0400
+Processing by JobsController#index as HTML
+  [1m[36mJob Load (0.3ms)[0m  [1mSELECT "jobs".* FROM "jobs"  ORDER BY created_at DESC[0m
+  Rendered jobs/index.html.haml within layouts/application (1.9ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.3ms)
+
+SyntaxError (/Users/fredypresutto/Documents/Rails/jobs_board/app/views/layouts/application.html.haml:13: syntax error, unexpected keyword_ensure, expecting keyword_end
+...:Util.html_safe(_erbout);ensure;@haml_buffer = @haml_buffer....
+...                               ^
+/Users/fredypresutto/Documents/Rails/jobs_board/app/views/layouts/application.html.haml:16: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/views/layouts/application.html.haml:13: syntax error, unexpected keyword_ensure, expecting keyword_end
+  app/views/layouts/application.html.haml:16: syntax error, unexpected end-of-input, expecting keyword_end
+
+
+  Rendered /Users/fredypresutto/.rvm/gems/ruby-2.2-head@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.2ms)
+  Rendered /Users/fredypresutto/.rvm/gems/ruby-2.2-head@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /Users/fredypresutto/.rvm/gems/ruby-2.2-head@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/fredypresutto/.rvm/gems/ruby-2.2-head@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (88.9ms)
+  Rendered /Users/fredypresutto/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/fredypresutto/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/fredypresutto/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/fredypresutto/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/fredypresutto/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (64.6ms)
+  Rendered /Users/fredypresutto/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/fredypresutto/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/fredypresutto/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (142.8ms)
+
+
+Started GET "/" for ::1 at 2015-05-08 10:39:22 -0400
+Processing by JobsController#index as HTML
+  [1m[35mJob Load (0.2ms)[0m  SELECT "jobs".* FROM "jobs"  ORDER BY created_at DESC
+  Rendered jobs/index.html.haml within layouts/application (1.5ms)
+Completed 500 Internal Server Error in 116ms (ActiveRecord: 0.2ms)
+
+ActionView::Template::Error (undefined local variable or method `each' for #<#<Class:0x007f80a0b30fb0>:0x007f80a3255af0>):
+     7: 	= csrf_meta_tags
+     8: 
+     9: %body
+    10: 	- Category.all each do |category|
+    11: 		= link_to category.name, jobs_path(category: category.name)
+    12: 	= yield
+  app/views/layouts/application.html.haml:10:in `_app_views_layouts_application_html_haml___2685867127424226545_70095234823120'
+
+
+  Rendered /Users/fredypresutto/.rvm/gems/ruby-2.2-head@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.3ms)
+  Rendered /Users/fredypresutto/.rvm/gems/ruby-2.2-head@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.4ms)
+  Rendered /Users/fredypresutto/.rvm/gems/ruby-2.2-head@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/fredypresutto/.rvm/gems/ruby-2.2-head@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (83.7ms)
+  Rendered /Users/fredypresutto/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/fredypresutto/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/fredypresutto/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/fredypresutto/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/fredypresutto/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (60.9ms)
+  Rendered /Users/fredypresutto/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/fredypresutto/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/fredypresutto/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (131.6ms)
+
+
+Started GET "/" for ::1 at 2015-05-08 10:39:43 -0400
+Processing by JobsController#index as HTML
+  [1m[36mJob Load (0.2ms)[0m  [1mSELECT "jobs".* FROM "jobs"  ORDER BY created_at DESC[0m
+  Rendered jobs/index.html.haml within layouts/application (2.1ms)
+  [1m[35mCategory Load (0.3ms)[0m  SELECT "categories".* FROM "categories"
+Completed 200 OK in 107ms (Views: 105.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/jobs.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-08 10:39:43 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-08 10:39:43 -0400
+
+
+Started GET "/assets/bootstrap/alert.self-15ce09eba576e56db3edfd87accc0ff48823df915169e350b4fd97290f96aee1.js?body=1" for ::1 at 2015-05-08 10:39:43 -0400
+
+
+Started GET "/assets/application.self-a38db50c6440c54eda47f2792dd3f0c307c3ed4c64b41c0cc694c4555a62aabb.css?body=1" for ::1 at 2015-05-08 10:39:43 -0400
+
+
+Started GET "/assets/bootstrap/affix.self-68d1a5161d04ca9fe1b9d9f4114d9426c7798bf90f2703a97aca35c8113469bb.js?body=1" for ::1 at 2015-05-08 10:39:43 -0400
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-08 10:39:43 -0400
+
+
+Started GET "/assets/bootstrap/button.self-37c62bff1d75f86f3348b8679873d5156d8b9938b62841038dca21690f4740f1.js?body=1" for ::1 at 2015-05-08 10:39:43 -0400
+
+
+Started GET "/assets/bootstrap/carousel.self-9aaab1a477b9c1156bab751cb8da47f77dace6da88eef8ae830e60f3cff3a8be.js?body=1" for ::1 at 2015-05-08 10:39:43 -0400
+
+
+Started GET "/assets/bootstrap/collapse.self-eeece00cd06a3d7cc071ab7845b549d4991edd0f0895e4be70fe40bac2fb5f4b.js?body=1" for ::1 at 2015-05-08 10:39:43 -0400
+
+
+Started GET "/assets/bootstrap/dropdown.self-a3998e7ca949c04cb86b5c635deb0abcc7a24dc02e81be66b8acfef02d811e45.js?body=1" for ::1 at 2015-05-08 10:39:43 -0400
+
+
+Started GET "/assets/bootstrap/modal.self-f2759e138605770e60526c00c6d86cbb3378da203641f9d6b204c9f0192b9267.js?body=1" for ::1 at 2015-05-08 10:39:43 -0400
+
+
+Started GET "/assets/bootstrap/scrollspy.self-5ea180afe4404f83fc97d997833f2edefd34475b0b5ddab310e27abc2bbd5f2f.js?body=1" for ::1 at 2015-05-08 10:39:43 -0400
+
+
+Started GET "/assets/bootstrap/tab.self-e1bba7115c90301056ee94c4716de2fcbe4498015def2dab9ff9879f339bd245.js?body=1" for ::1 at 2015-05-08 10:39:43 -0400
+
+
+Started GET "/assets/bootstrap/transition.self-7742dca5e6acf313fbb217811b48468282cddf1a9baea5c89ec92e367ef242cb.js?body=1" for ::1 at 2015-05-08 10:39:43 -0400
+
+
+Started GET "/assets/bootstrap/tooltip.self-c3b5c16f394ab9c0391db4431aac4f2d2ddf1bba4c5d3228ed343de05ecc8e83.js?body=1" for ::1 at 2015-05-08 10:39:43 -0400
+
+
+Started GET "/assets/bootstrap/popover.self-2674d99c3ab0415dba0b958a80b3840f70ff6368b155d890306c0291be49453b.js?body=1" for ::1 at 2015-05-08 10:39:43 -0400
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-05-08 10:39:43 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-05-08 10:39:43 -0400
+
+
+Started GET "/assets/jobs.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-08 10:39:43 -0400
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2015-05-08 10:39:43 -0400
+
+
+Started GET "/" for ::1 at 2015-05-08 10:43:01 -0400
+Processing by JobsController#index as HTML
+  [1m[36mJob Load (0.3ms)[0m  [1mSELECT "jobs".* FROM "jobs"  ORDER BY created_at DESC[0m
+  Rendered jobs/index.html.haml within layouts/application (6.3ms)
+  [1m[35mCategory Load (0.2ms)[0m  SELECT "categories".* FROM "categories"
+Completed 200 OK in 130ms (Views: 126.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/jobs.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-08 10:43:01 -0400
+
+
+Started GET "/assets/application.self-a38db50c6440c54eda47f2792dd3f0c307c3ed4c64b41c0cc694c4555a62aabb.css?body=1" for ::1 at 2015-05-08 10:43:01 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-08 10:43:01 -0400
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-08 10:43:01 -0400
+
+
+Started GET "/assets/bootstrap/button.self-37c62bff1d75f86f3348b8679873d5156d8b9938b62841038dca21690f4740f1.js?body=1" for ::1 at 2015-05-08 10:43:01 -0400
+
+
+Started GET "/assets/bootstrap/affix.self-68d1a5161d04ca9fe1b9d9f4114d9426c7798bf90f2703a97aca35c8113469bb.js?body=1" for ::1 at 2015-05-08 10:43:01 -0400
+
+
+Started GET "/assets/bootstrap/carousel.self-9aaab1a477b9c1156bab751cb8da47f77dace6da88eef8ae830e60f3cff3a8be.js?body=1" for ::1 at 2015-05-08 10:43:01 -0400
+
+
+Started GET "/assets/bootstrap/alert.self-15ce09eba576e56db3edfd87accc0ff48823df915169e350b4fd97290f96aee1.js?body=1" for ::1 at 2015-05-08 10:43:01 -0400
+
+
+Started GET "/assets/bootstrap/collapse.self-eeece00cd06a3d7cc071ab7845b549d4991edd0f0895e4be70fe40bac2fb5f4b.js?body=1" for ::1 at 2015-05-08 10:43:01 -0400
+
+
+Started GET "/assets/bootstrap/dropdown.self-a3998e7ca949c04cb86b5c635deb0abcc7a24dc02e81be66b8acfef02d811e45.js?body=1" for ::1 at 2015-05-08 10:43:01 -0400
+
+
+Started GET "/assets/bootstrap/modal.self-f2759e138605770e60526c00c6d86cbb3378da203641f9d6b204c9f0192b9267.js?body=1" for ::1 at 2015-05-08 10:43:01 -0400
+
+
+Started GET "/assets/bootstrap/scrollspy.self-5ea180afe4404f83fc97d997833f2edefd34475b0b5ddab310e27abc2bbd5f2f.js?body=1" for ::1 at 2015-05-08 10:43:01 -0400
+
+
+Started GET "/assets/bootstrap/tab.self-e1bba7115c90301056ee94c4716de2fcbe4498015def2dab9ff9879f339bd245.js?body=1" for ::1 at 2015-05-08 10:43:01 -0400
+
+
+Started GET "/assets/bootstrap/transition.self-7742dca5e6acf313fbb217811b48468282cddf1a9baea5c89ec92e367ef242cb.js?body=1" for ::1 at 2015-05-08 10:43:01 -0400
+
+
+Started GET "/assets/bootstrap/tooltip.self-c3b5c16f394ab9c0391db4431aac4f2d2ddf1bba4c5d3228ed343de05ecc8e83.js?body=1" for ::1 at 2015-05-08 10:43:01 -0400
+
+
+Started GET "/assets/bootstrap/popover.self-2674d99c3ab0415dba0b958a80b3840f70ff6368b155d890306c0291be49453b.js?body=1" for ::1 at 2015-05-08 10:43:01 -0400
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-05-08 10:43:01 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-05-08 10:43:01 -0400
+
+
+Started GET "/assets/jobs.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-08 10:43:01 -0400
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2015-05-08 10:43:01 -0400
+
+
+Started GET "/jobs?category=Full+Time" for ::1 at 2015-05-08 10:43:04 -0400
+Processing by JobsController#index as HTML
+  Parameters: {"category"=>"Full Time"}
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."name" = ? LIMIT 1[0m  [["name", "Full Time"]]
+  [1m[35mJob Load (0.2ms)[0m  SELECT "jobs".* FROM "jobs" WHERE "jobs"."category_id" = ?  ORDER BY created_at DESC  [["category_id", 1]]
+  Rendered jobs/index.html.haml within layouts/application (1.3ms)
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+Completed 200 OK in 107ms (Views: 103.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/jobs?category=Full+Time" for ::1 at 2015-05-08 10:46:48 -0400
+Processing by JobsController#index as HTML
+  Parameters: {"category"=>"Full Time"}
+  [1m[35mCategory Load (0.3ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."name" = ? LIMIT 1  [["name", "Full Time"]]
+  [1m[36mJob Load (0.1ms)[0m  [1mSELECT "jobs".* FROM "jobs" WHERE "jobs"."category_id" = ?  ORDER BY created_at DESC[0m  [["category_id", 1]]
+  Rendered jobs/index.html.haml within layouts/application (1.3ms)
+  [1m[35mCategory Load (0.1ms)[0m  SELECT "categories".* FROM "categories"
+Completed 200 OK in 114ms (Views: 111.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/jobs.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-08 10:46:48 -0400
+
+
+Started GET "/assets/application.self-a38db50c6440c54eda47f2792dd3f0c307c3ed4c64b41c0cc694c4555a62aabb.css?body=1" for ::1 at 2015-05-08 10:46:48 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-08 10:46:48 -0400
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-08 10:46:48 -0400
+
+
+Started GET "/assets/bootstrap/button.self-37c62bff1d75f86f3348b8679873d5156d8b9938b62841038dca21690f4740f1.js?body=1" for ::1 at 2015-05-08 10:46:48 -0400
+
+
+Started GET "/assets/bootstrap/affix.self-68d1a5161d04ca9fe1b9d9f4114d9426c7798bf90f2703a97aca35c8113469bb.js?body=1" for ::1 at 2015-05-08 10:46:48 -0400
+
+
+Started GET "/assets/bootstrap/alert.self-15ce09eba576e56db3edfd87accc0ff48823df915169e350b4fd97290f96aee1.js?body=1" for ::1 at 2015-05-08 10:46:48 -0400
+
+
+Started GET "/assets/bootstrap/carousel.self-9aaab1a477b9c1156bab751cb8da47f77dace6da88eef8ae830e60f3cff3a8be.js?body=1" for ::1 at 2015-05-08 10:46:48 -0400
+
+
+Started GET "/assets/bootstrap/collapse.self-eeece00cd06a3d7cc071ab7845b549d4991edd0f0895e4be70fe40bac2fb5f4b.js?body=1" for ::1 at 2015-05-08 10:46:48 -0400
+
+
+Started GET "/assets/bootstrap/dropdown.self-a3998e7ca949c04cb86b5c635deb0abcc7a24dc02e81be66b8acfef02d811e45.js?body=1" for ::1 at 2015-05-08 10:46:48 -0400
+
+
+Started GET "/assets/bootstrap/modal.self-f2759e138605770e60526c00c6d86cbb3378da203641f9d6b204c9f0192b9267.js?body=1" for ::1 at 2015-05-08 10:46:49 -0400
+
+
+Started GET "/assets/bootstrap/scrollspy.self-5ea180afe4404f83fc97d997833f2edefd34475b0b5ddab310e27abc2bbd5f2f.js?body=1" for ::1 at 2015-05-08 10:46:49 -0400
+
+
+Started GET "/assets/bootstrap/tab.self-e1bba7115c90301056ee94c4716de2fcbe4498015def2dab9ff9879f339bd245.js?body=1" for ::1 at 2015-05-08 10:46:49 -0400
+
+
+Started GET "/assets/bootstrap/transition.self-7742dca5e6acf313fbb217811b48468282cddf1a9baea5c89ec92e367ef242cb.js?body=1" for ::1 at 2015-05-08 10:46:49 -0400
+
+
+Started GET "/assets/bootstrap/tooltip.self-c3b5c16f394ab9c0391db4431aac4f2d2ddf1bba4c5d3228ed343de05ecc8e83.js?body=1" for ::1 at 2015-05-08 10:46:49 -0400
+
+
+Started GET "/assets/bootstrap/popover.self-2674d99c3ab0415dba0b958a80b3840f70ff6368b155d890306c0291be49453b.js?body=1" for ::1 at 2015-05-08 10:46:49 -0400
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-05-08 10:46:49 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-05-08 10:46:49 -0400
+
+
+Started GET "/assets/jobs.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-08 10:46:49 -0400
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2015-05-08 10:46:49 -0400
+
+
+Started GET "/jobs?category=Full+Time" for ::1 at 2015-05-08 10:51:17 -0400
+Processing by JobsController#index as HTML
+  Parameters: {"category"=>"Full Time"}
+  [1m[36mCategory Load (0.1ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."name" = ? LIMIT 1[0m  [["name", "Full Time"]]
+  [1m[35mJob Load (0.1ms)[0m  SELECT "jobs".* FROM "jobs" WHERE "jobs"."category_id" = ?  ORDER BY created_at DESC  [["category_id", 1]]
+  Rendered jobs/index.html.haml within layouts/application (1.0ms)
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+Completed 200 OK in 99ms (Views: 97.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.self-a38db50c6440c54eda47f2792dd3f0c307c3ed4c64b41c0cc694c4555a62aabb.css?body=1" for ::1 at 2015-05-08 10:51:17 -0400
+
+
+Started GET "/assets/jobs.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-08 10:51:17 -0400
+
+
+Started GET "/assets/bootstrap/affix.self-68d1a5161d04ca9fe1b9d9f4114d9426c7798bf90f2703a97aca35c8113469bb.js?body=1" for ::1 at 2015-05-08 10:51:17 -0400
+
+
+Started GET "/assets/bootstrap/alert.self-15ce09eba576e56db3edfd87accc0ff48823df915169e350b4fd97290f96aee1.js?body=1" for ::1 at 2015-05-08 10:51:17 -0400
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-08 10:51:17 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-08 10:51:17 -0400
+
+
+Started GET "/assets/bootstrap/button.self-37c62bff1d75f86f3348b8679873d5156d8b9938b62841038dca21690f4740f1.js?body=1" for ::1 at 2015-05-08 10:51:17 -0400
+
+
+Started GET "/assets/bootstrap/carousel.self-9aaab1a477b9c1156bab751cb8da47f77dace6da88eef8ae830e60f3cff3a8be.js?body=1" for ::1 at 2015-05-08 10:51:17 -0400
+
+
+Started GET "/assets/bootstrap/collapse.self-eeece00cd06a3d7cc071ab7845b549d4991edd0f0895e4be70fe40bac2fb5f4b.js?body=1" for ::1 at 2015-05-08 10:51:17 -0400
+
+
+Started GET "/assets/bootstrap/dropdown.self-a3998e7ca949c04cb86b5c635deb0abcc7a24dc02e81be66b8acfef02d811e45.js?body=1" for ::1 at 2015-05-08 10:51:18 -0400
+
+
+Started GET "/assets/bootstrap/modal.self-f2759e138605770e60526c00c6d86cbb3378da203641f9d6b204c9f0192b9267.js?body=1" for ::1 at 2015-05-08 10:51:18 -0400
+
+
+Started GET "/assets/bootstrap/scrollspy.self-5ea180afe4404f83fc97d997833f2edefd34475b0b5ddab310e27abc2bbd5f2f.js?body=1" for ::1 at 2015-05-08 10:51:18 -0400
+
+
+Started GET "/assets/bootstrap/tab.self-e1bba7115c90301056ee94c4716de2fcbe4498015def2dab9ff9879f339bd245.js?body=1" for ::1 at 2015-05-08 10:51:18 -0400
+
+
+Started GET "/assets/bootstrap/transition.self-7742dca5e6acf313fbb217811b48468282cddf1a9baea5c89ec92e367ef242cb.js?body=1" for ::1 at 2015-05-08 10:51:18 -0400
+
+
+Started GET "/assets/bootstrap/tooltip.self-c3b5c16f394ab9c0391db4431aac4f2d2ddf1bba4c5d3228ed343de05ecc8e83.js?body=1" for ::1 at 2015-05-08 10:51:18 -0400
+
+
+Started GET "/assets/bootstrap/popover.self-2674d99c3ab0415dba0b958a80b3840f70ff6368b155d890306c0291be49453b.js?body=1" for ::1 at 2015-05-08 10:51:18 -0400
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-05-08 10:51:18 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-05-08 10:51:18 -0400
+
+
+Started GET "/assets/jobs.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-08 10:51:18 -0400
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2015-05-08 10:51:18 -0400
+
+
+Started GET "/jobs?category=Full+Time" for ::1 at 2015-05-08 10:53:35 -0400
+Processing by JobsController#index as HTML
+  Parameters: {"category"=>"Full Time"}
+  [1m[35mCategory Load (0.1ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."name" = ? LIMIT 1  [["name", "Full Time"]]
+  [1m[36mJob Load (0.1ms)[0m  [1mSELECT "jobs".* FROM "jobs" WHERE "jobs"."category_id" = ?  ORDER BY created_at DESC[0m  [["category_id", 1]]
+  Rendered jobs/index.html.haml within layouts/application (0.9ms)
+  [1m[35mCategory Load (0.1ms)[0m  SELECT "categories".* FROM "categories"
+Completed 200 OK in 100ms (Views: 98.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/jobs.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-08 10:53:35 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-08 10:53:35 -0400
+
+
+Started GET "/assets/bootstrap/affix.self-68d1a5161d04ca9fe1b9d9f4114d9426c7798bf90f2703a97aca35c8113469bb.js?body=1" for ::1 at 2015-05-08 10:53:35 -0400
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-08 10:53:35 -0400
+
+
+Started GET "/assets/application.self-a38db50c6440c54eda47f2792dd3f0c307c3ed4c64b41c0cc694c4555a62aabb.css?body=1" for ::1 at 2015-05-08 10:53:35 -0400
+
+
+Started GET "/assets/bootstrap/alert.self-15ce09eba576e56db3edfd87accc0ff48823df915169e350b4fd97290f96aee1.js?body=1" for ::1 at 2015-05-08 10:53:35 -0400
+
+
+Started GET "/assets/bootstrap/button.self-37c62bff1d75f86f3348b8679873d5156d8b9938b62841038dca21690f4740f1.js?body=1" for ::1 at 2015-05-08 10:53:35 -0400
+
+
+Started GET "/assets/bootstrap/carousel.self-9aaab1a477b9c1156bab751cb8da47f77dace6da88eef8ae830e60f3cff3a8be.js?body=1" for ::1 at 2015-05-08 10:53:35 -0400
+
+
+Started GET "/assets/bootstrap/collapse.self-eeece00cd06a3d7cc071ab7845b549d4991edd0f0895e4be70fe40bac2fb5f4b.js?body=1" for ::1 at 2015-05-08 10:53:35 -0400
+
+
+Started GET "/assets/bootstrap/dropdown.self-a3998e7ca949c04cb86b5c635deb0abcc7a24dc02e81be66b8acfef02d811e45.js?body=1" for ::1 at 2015-05-08 10:53:35 -0400
+
+
+Started GET "/assets/bootstrap/modal.self-f2759e138605770e60526c00c6d86cbb3378da203641f9d6b204c9f0192b9267.js?body=1" for ::1 at 2015-05-08 10:53:35 -0400
+
+
+Started GET "/assets/bootstrap/scrollspy.self-5ea180afe4404f83fc97d997833f2edefd34475b0b5ddab310e27abc2bbd5f2f.js?body=1" for ::1 at 2015-05-08 10:53:35 -0400
+
+
+Started GET "/assets/bootstrap/tab.self-e1bba7115c90301056ee94c4716de2fcbe4498015def2dab9ff9879f339bd245.js?body=1" for ::1 at 2015-05-08 10:53:35 -0400
+
+
+Started GET "/assets/bootstrap/transition.self-7742dca5e6acf313fbb217811b48468282cddf1a9baea5c89ec92e367ef242cb.js?body=1" for ::1 at 2015-05-08 10:53:35 -0400
+
+
+Started GET "/assets/bootstrap/tooltip.self-c3b5c16f394ab9c0391db4431aac4f2d2ddf1bba4c5d3228ed343de05ecc8e83.js?body=1" for ::1 at 2015-05-08 10:53:35 -0400
+
+
+Started GET "/assets/bootstrap/popover.self-2674d99c3ab0415dba0b958a80b3840f70ff6368b155d890306c0291be49453b.js?body=1" for ::1 at 2015-05-08 10:53:35 -0400
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-05-08 10:53:35 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-05-08 10:53:35 -0400
+
+
+Started GET "/assets/jobs.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-08 10:53:35 -0400
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2015-05-08 10:53:35 -0400
+
+
+Started GET "/" for ::1 at 2015-05-08 10:53:39 -0400
+Processing by JobsController#index as HTML
+  [1m[36mJob Load (0.2ms)[0m  [1mSELECT "jobs".* FROM "jobs"  ORDER BY created_at DESC[0m
+  Rendered jobs/index.html.haml within layouts/application (1.4ms)
+  [1m[35mCategory Load (0.2ms)[0m  SELECT "categories".* FROM "categories"
+Completed 200 OK in 105ms (Views: 103.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2015-05-08 10:57:46 -0400
+Processing by JobsController#index as HTML
+  [1m[36mJob Load (0.2ms)[0m  [1mSELECT "jobs".* FROM "jobs"  ORDER BY created_at DESC[0m
+  Rendered jobs/index.html.haml within layouts/application (3.2ms)
+  [1m[35mCategory Load (0.2ms)[0m  SELECT "categories".* FROM "categories"
+Completed 200 OK in 1886ms (Views: 1885.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.self-2af0e0ab7cdbd58a56d9ca3690d44a121b3c9a6e7b082d0efed628ad2af53bd8.css?body=1" for ::1 at 2015-05-08 10:57:48 -0400
+
+
+Started GET "/assets/jobs.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-08 10:57:48 -0400
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-08 10:57:48 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-08 10:57:48 -0400
+
+
+Started GET "/assets/bootstrap/affix.self-68d1a5161d04ca9fe1b9d9f4114d9426c7798bf90f2703a97aca35c8113469bb.js?body=1" for ::1 at 2015-05-08 10:57:48 -0400
+
+
+Started GET "/assets/bootstrap/alert.self-15ce09eba576e56db3edfd87accc0ff48823df915169e350b4fd97290f96aee1.js?body=1" for ::1 at 2015-05-08 10:57:48 -0400
+
+
+Started GET "/assets/bootstrap/button.self-37c62bff1d75f86f3348b8679873d5156d8b9938b62841038dca21690f4740f1.js?body=1" for ::1 at 2015-05-08 10:57:48 -0400
+
+
+Started GET "/assets/bootstrap/carousel.self-9aaab1a477b9c1156bab751cb8da47f77dace6da88eef8ae830e60f3cff3a8be.js?body=1" for ::1 at 2015-05-08 10:57:48 -0400
+
+
+Started GET "/assets/bootstrap/collapse.self-eeece00cd06a3d7cc071ab7845b549d4991edd0f0895e4be70fe40bac2fb5f4b.js?body=1" for ::1 at 2015-05-08 10:57:48 -0400
+
+
+Started GET "/assets/bootstrap/dropdown.self-a3998e7ca949c04cb86b5c635deb0abcc7a24dc02e81be66b8acfef02d811e45.js?body=1" for ::1 at 2015-05-08 10:57:48 -0400
+
+
+Started GET "/assets/bootstrap/modal.self-f2759e138605770e60526c00c6d86cbb3378da203641f9d6b204c9f0192b9267.js?body=1" for ::1 at 2015-05-08 10:57:48 -0400
+
+
+Started GET "/assets/bootstrap/scrollspy.self-5ea180afe4404f83fc97d997833f2edefd34475b0b5ddab310e27abc2bbd5f2f.js?body=1" for ::1 at 2015-05-08 10:57:48 -0400
+
+
+Started GET "/assets/bootstrap/tab.self-e1bba7115c90301056ee94c4716de2fcbe4498015def2dab9ff9879f339bd245.js?body=1" for ::1 at 2015-05-08 10:57:48 -0400
+
+
+Started GET "/assets/bootstrap/transition.self-7742dca5e6acf313fbb217811b48468282cddf1a9baea5c89ec92e367ef242cb.js?body=1" for ::1 at 2015-05-08 10:57:48 -0400
+
+
+Started GET "/assets/bootstrap/tooltip.self-c3b5c16f394ab9c0391db4431aac4f2d2ddf1bba4c5d3228ed343de05ecc8e83.js?body=1" for ::1 at 2015-05-08 10:57:48 -0400
+
+
+Started GET "/assets/bootstrap/popover.self-2674d99c3ab0415dba0b958a80b3840f70ff6368b155d890306c0291be49453b.js?body=1" for ::1 at 2015-05-08 10:57:48 -0400
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-05-08 10:57:48 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-05-08 10:57:48 -0400
+
+
+Started GET "/assets/jobs.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-08 10:57:48 -0400
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2015-05-08 10:57:48 -0400
+
+
+Started GET "/" for ::1 at 2015-05-08 10:58:10 -0400
+Processing by JobsController#index as HTML
+  [1m[36mJob Load (0.2ms)[0m  [1mSELECT "jobs".* FROM "jobs"  ORDER BY created_at DESC[0m
+  Rendered jobs/index.html.haml within layouts/application (2.9ms)
+  [1m[35mCategory Load (0.2ms)[0m  SELECT "categories".* FROM "categories"
+Completed 200 OK in 102ms (Views: 100.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/jobs.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-08 10:58:10 -0400
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-08 10:58:10 -0400
+
+
+Started GET "/assets/bootstrap/alert.self-15ce09eba576e56db3edfd87accc0ff48823df915169e350b4fd97290f96aee1.js?body=1" for ::1 at 2015-05-08 10:58:10 -0400
+
+
+Started GET "/assets/application.self-2af0e0ab7cdbd58a56d9ca3690d44a121b3c9a6e7b082d0efed628ad2af53bd8.css?body=1" for ::1 at 2015-05-08 10:58:10 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-08 10:58:10 -0400
+
+
+Started GET "/assets/bootstrap/affix.self-68d1a5161d04ca9fe1b9d9f4114d9426c7798bf90f2703a97aca35c8113469bb.js?body=1" for ::1 at 2015-05-08 10:58:10 -0400
+
+
+Started GET "/assets/bootstrap/button.self-37c62bff1d75f86f3348b8679873d5156d8b9938b62841038dca21690f4740f1.js?body=1" for ::1 at 2015-05-08 10:58:10 -0400
+
+
+Started GET "/assets/bootstrap/carousel.self-9aaab1a477b9c1156bab751cb8da47f77dace6da88eef8ae830e60f3cff3a8be.js?body=1" for ::1 at 2015-05-08 10:58:10 -0400
+
+
+Started GET "/assets/bootstrap/collapse.self-eeece00cd06a3d7cc071ab7845b549d4991edd0f0895e4be70fe40bac2fb5f4b.js?body=1" for ::1 at 2015-05-08 10:58:10 -0400
+
+
+Started GET "/assets/bootstrap/dropdown.self-a3998e7ca949c04cb86b5c635deb0abcc7a24dc02e81be66b8acfef02d811e45.js?body=1" for ::1 at 2015-05-08 10:58:10 -0400
+
+
+Started GET "/assets/bootstrap/modal.self-f2759e138605770e60526c00c6d86cbb3378da203641f9d6b204c9f0192b9267.js?body=1" for ::1 at 2015-05-08 10:58:10 -0400
+
+
+Started GET "/assets/bootstrap/scrollspy.self-5ea180afe4404f83fc97d997833f2edefd34475b0b5ddab310e27abc2bbd5f2f.js?body=1" for ::1 at 2015-05-08 10:58:11 -0400
+
+
+Started GET "/assets/bootstrap/tab.self-e1bba7115c90301056ee94c4716de2fcbe4498015def2dab9ff9879f339bd245.js?body=1" for ::1 at 2015-05-08 10:58:11 -0400
+
+
+Started GET "/assets/bootstrap/transition.self-7742dca5e6acf313fbb217811b48468282cddf1a9baea5c89ec92e367ef242cb.js?body=1" for ::1 at 2015-05-08 10:58:11 -0400
+
+
+Started GET "/assets/bootstrap/tooltip.self-c3b5c16f394ab9c0391db4431aac4f2d2ddf1bba4c5d3228ed343de05ecc8e83.js?body=1" for ::1 at 2015-05-08 10:58:11 -0400
+
+
+Started GET "/assets/bootstrap/popover.self-2674d99c3ab0415dba0b958a80b3840f70ff6368b155d890306c0291be49453b.js?body=1" for ::1 at 2015-05-08 10:58:11 -0400
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-05-08 10:58:11 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-05-08 10:58:11 -0400
+
+
+Started GET "/assets/jobs.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-08 10:58:11 -0400
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2015-05-08 10:58:11 -0400
+
+
+Started GET "/" for ::1 at 2015-05-08 11:00:30 -0400
+Processing by JobsController#index as HTML
+  [1m[36mJob Load (0.3ms)[0m  [1mSELECT "jobs".* FROM "jobs"  ORDER BY created_at DESC[0m
+  Rendered jobs/index.html.haml within layouts/application (1.8ms)
+  [1m[35mCategory Load (0.1ms)[0m  SELECT "categories".* FROM "categories"
+Completed 200 OK in 110ms (Views: 108.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/jobs.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-08 11:00:30 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-08 11:00:30 -0400
+
+
+Started GET "/assets/application.self-2af0e0ab7cdbd58a56d9ca3690d44a121b3c9a6e7b082d0efed628ad2af53bd8.css?body=1" for ::1 at 2015-05-08 11:00:30 -0400
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-08 11:00:30 -0400
+
+
+Started GET "/assets/bootstrap/button.self-37c62bff1d75f86f3348b8679873d5156d8b9938b62841038dca21690f4740f1.js?body=1" for ::1 at 2015-05-08 11:00:30 -0400
+
+
+Started GET "/assets/bootstrap/affix.self-68d1a5161d04ca9fe1b9d9f4114d9426c7798bf90f2703a97aca35c8113469bb.js?body=1" for ::1 at 2015-05-08 11:00:30 -0400
+
+
+Started GET "/assets/bootstrap/alert.self-15ce09eba576e56db3edfd87accc0ff48823df915169e350b4fd97290f96aee1.js?body=1" for ::1 at 2015-05-08 11:00:30 -0400
+
+
+Started GET "/assets/bootstrap/carousel.self-9aaab1a477b9c1156bab751cb8da47f77dace6da88eef8ae830e60f3cff3a8be.js?body=1" for ::1 at 2015-05-08 11:00:30 -0400
+
+
+Started GET "/assets/bootstrap/collapse.self-eeece00cd06a3d7cc071ab7845b549d4991edd0f0895e4be70fe40bac2fb5f4b.js?body=1" for ::1 at 2015-05-08 11:00:30 -0400
+
+
+Started GET "/assets/bootstrap/dropdown.self-a3998e7ca949c04cb86b5c635deb0abcc7a24dc02e81be66b8acfef02d811e45.js?body=1" for ::1 at 2015-05-08 11:00:30 -0400
+
+
+Started GET "/assets/bootstrap/modal.self-f2759e138605770e60526c00c6d86cbb3378da203641f9d6b204c9f0192b9267.js?body=1" for ::1 at 2015-05-08 11:00:30 -0400
+
+
+Started GET "/assets/bootstrap/scrollspy.self-5ea180afe4404f83fc97d997833f2edefd34475b0b5ddab310e27abc2bbd5f2f.js?body=1" for ::1 at 2015-05-08 11:00:30 -0400
+
+
+Started GET "/assets/bootstrap/tab.self-e1bba7115c90301056ee94c4716de2fcbe4498015def2dab9ff9879f339bd245.js?body=1" for ::1 at 2015-05-08 11:00:30 -0400
+
+
+Started GET "/assets/bootstrap/transition.self-7742dca5e6acf313fbb217811b48468282cddf1a9baea5c89ec92e367ef242cb.js?body=1" for ::1 at 2015-05-08 11:00:30 -0400
+
+
+Started GET "/assets/bootstrap/tooltip.self-c3b5c16f394ab9c0391db4431aac4f2d2ddf1bba4c5d3228ed343de05ecc8e83.js?body=1" for ::1 at 2015-05-08 11:00:30 -0400
+
+
+Started GET "/assets/bootstrap/popover.self-2674d99c3ab0415dba0b958a80b3840f70ff6368b155d890306c0291be49453b.js?body=1" for ::1 at 2015-05-08 11:00:30 -0400
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-05-08 11:00:30 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-05-08 11:00:30 -0400
+
+
+Started GET "/assets/jobs.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-08 11:00:30 -0400
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2015-05-08 11:00:30 -0400
+
+
+Started GET "/" for ::1 at 2015-05-08 11:01:52 -0400
+Processing by JobsController#index as HTML
+  [1m[36mJob Load (0.2ms)[0m  [1mSELECT "jobs".* FROM "jobs"  ORDER BY created_at DESC[0m
+  Rendered jobs/index.html.haml within layouts/application (1.8ms)
+  [1m[35mCategory Load (0.2ms)[0m  SELECT "categories".* FROM "categories"
+Completed 200 OK in 108ms (Views: 106.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/jobs.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-08 11:01:52 -0400
+
+
+Started GET "/assets/application.self-2af0e0ab7cdbd58a56d9ca3690d44a121b3c9a6e7b082d0efed628ad2af53bd8.css?body=1" for ::1 at 2015-05-08 11:01:52 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-08 11:01:52 -0400
+
+
+Started GET "/assets/bootstrap/alert.self-15ce09eba576e56db3edfd87accc0ff48823df915169e350b4fd97290f96aee1.js?body=1" for ::1 at 2015-05-08 11:01:52 -0400
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-08 11:01:52 -0400
+
+
+Started GET "/assets/bootstrap/affix.self-68d1a5161d04ca9fe1b9d9f4114d9426c7798bf90f2703a97aca35c8113469bb.js?body=1" for ::1 at 2015-05-08 11:01:52 -0400
+
+
+Started GET "/assets/bootstrap/button.self-37c62bff1d75f86f3348b8679873d5156d8b9938b62841038dca21690f4740f1.js?body=1" for ::1 at 2015-05-08 11:01:52 -0400
+
+
+Started GET "/assets/bootstrap/carousel.self-9aaab1a477b9c1156bab751cb8da47f77dace6da88eef8ae830e60f3cff3a8be.js?body=1" for ::1 at 2015-05-08 11:01:52 -0400
+
+
+Started GET "/assets/bootstrap/collapse.self-eeece00cd06a3d7cc071ab7845b549d4991edd0f0895e4be70fe40bac2fb5f4b.js?body=1" for ::1 at 2015-05-08 11:01:52 -0400
+
+
+Started GET "/assets/bootstrap/dropdown.self-a3998e7ca949c04cb86b5c635deb0abcc7a24dc02e81be66b8acfef02d811e45.js?body=1" for ::1 at 2015-05-08 11:01:52 -0400
+
+
+Started GET "/assets/bootstrap/modal.self-f2759e138605770e60526c00c6d86cbb3378da203641f9d6b204c9f0192b9267.js?body=1" for ::1 at 2015-05-08 11:01:52 -0400
+
+
+Started GET "/assets/bootstrap/scrollspy.self-5ea180afe4404f83fc97d997833f2edefd34475b0b5ddab310e27abc2bbd5f2f.js?body=1" for ::1 at 2015-05-08 11:01:52 -0400
+
+
+Started GET "/assets/bootstrap/tab.self-e1bba7115c90301056ee94c4716de2fcbe4498015def2dab9ff9879f339bd245.js?body=1" for ::1 at 2015-05-08 11:01:52 -0400
+
+
+Started GET "/assets/bootstrap/transition.self-7742dca5e6acf313fbb217811b48468282cddf1a9baea5c89ec92e367ef242cb.js?body=1" for ::1 at 2015-05-08 11:01:52 -0400
+
+
+Started GET "/assets/bootstrap/tooltip.self-c3b5c16f394ab9c0391db4431aac4f2d2ddf1bba4c5d3228ed343de05ecc8e83.js?body=1" for ::1 at 2015-05-08 11:01:52 -0400
+
+
+Started GET "/assets/bootstrap/popover.self-2674d99c3ab0415dba0b958a80b3840f70ff6368b155d890306c0291be49453b.js?body=1" for ::1 at 2015-05-08 11:01:52 -0400
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-05-08 11:01:52 -0400
+
+
+Started GET "/assets/jobs.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-08 11:01:52 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-05-08 11:01:52 -0400
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2015-05-08 11:01:52 -0400
+
+
+Started GET "/jobs/5" for ::1 at 2015-05-08 11:01:53 -0400
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mJob Load (0.3ms)[0m  [1mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered jobs/show.html.haml within layouts/application (2.4ms)
+  [1m[35mCategory Load (0.2ms)[0m  SELECT "categories".* FROM "categories"
+Completed 200 OK in 118ms (Views: 115.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/jobs/5" for ::1 at 2015-05-08 11:03:37 -0400
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mJob Load (0.1ms)[0m  [1mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered jobs/show.html.haml within layouts/application (3.1ms)
+  [1m[35mCategory Load (0.2ms)[0m  SELECT "categories".* FROM "categories"
+Completed 200 OK in 118ms (Views: 116.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self-2af0e0ab7cdbd58a56d9ca3690d44a121b3c9a6e7b082d0efed628ad2af53bd8.css?body=1" for ::1 at 2015-05-08 11:03:37 -0400
+
+
+Started GET "/assets/jobs.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-08 11:03:37 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-08 11:03:37 -0400
+
+
+Started GET "/assets/bootstrap/affix.self-68d1a5161d04ca9fe1b9d9f4114d9426c7798bf90f2703a97aca35c8113469bb.js?body=1" for ::1 at 2015-05-08 11:03:37 -0400
+
+
+Started GET "/assets/bootstrap/alert.self-15ce09eba576e56db3edfd87accc0ff48823df915169e350b4fd97290f96aee1.js?body=1" for ::1 at 2015-05-08 11:03:37 -0400
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-08 11:03:37 -0400
+
+
+Started GET "/assets/bootstrap/button.self-37c62bff1d75f86f3348b8679873d5156d8b9938b62841038dca21690f4740f1.js?body=1" for ::1 at 2015-05-08 11:03:37 -0400
+
+
+Started GET "/assets/bootstrap/carousel.self-9aaab1a477b9c1156bab751cb8da47f77dace6da88eef8ae830e60f3cff3a8be.js?body=1" for ::1 at 2015-05-08 11:03:37 -0400
+
+
+Started GET "/assets/bootstrap/collapse.self-eeece00cd06a3d7cc071ab7845b549d4991edd0f0895e4be70fe40bac2fb5f4b.js?body=1" for ::1 at 2015-05-08 11:03:37 -0400
+
+
+Started GET "/assets/bootstrap/dropdown.self-a3998e7ca949c04cb86b5c635deb0abcc7a24dc02e81be66b8acfef02d811e45.js?body=1" for ::1 at 2015-05-08 11:03:37 -0400
+
+
+Started GET "/assets/bootstrap/modal.self-f2759e138605770e60526c00c6d86cbb3378da203641f9d6b204c9f0192b9267.js?body=1" for ::1 at 2015-05-08 11:03:37 -0400
+
+
+Started GET "/assets/bootstrap/scrollspy.self-5ea180afe4404f83fc97d997833f2edefd34475b0b5ddab310e27abc2bbd5f2f.js?body=1" for ::1 at 2015-05-08 11:03:37 -0400
+
+
+Started GET "/assets/bootstrap/tab.self-e1bba7115c90301056ee94c4716de2fcbe4498015def2dab9ff9879f339bd245.js?body=1" for ::1 at 2015-05-08 11:03:37 -0400
+
+
+Started GET "/assets/bootstrap/transition.self-7742dca5e6acf313fbb217811b48468282cddf1a9baea5c89ec92e367ef242cb.js?body=1" for ::1 at 2015-05-08 11:03:37 -0400
+
+
+Started GET "/assets/bootstrap/tooltip.self-c3b5c16f394ab9c0391db4431aac4f2d2ddf1bba4c5d3228ed343de05ecc8e83.js?body=1" for ::1 at 2015-05-08 11:03:37 -0400
+
+
+Started GET "/assets/bootstrap/popover.self-2674d99c3ab0415dba0b958a80b3840f70ff6368b155d890306c0291be49453b.js?body=1" for ::1 at 2015-05-08 11:03:37 -0400
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-05-08 11:03:37 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-05-08 11:03:37 -0400
+
+
+Started GET "/assets/jobs.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-08 11:03:37 -0400
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2015-05-08 11:03:37 -0400
+
+
+Started GET "/jobs/5/edit" for ::1 at 2015-05-08 11:03:38 -0400
+Processing by JobsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mJob Load (0.1ms)[0m  [1mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mCategory Load (0.2ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered jobs/_form.html.haml (98.8ms)
+  Rendered jobs/edit.html.haml within layouts/application (102.2ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+Completed 200 OK in 210ms (Views: 209.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2015-05-08 11:04:34 -0400
+Processing by JobsController#index as HTML
+  [1m[35mJob Load (0.2ms)[0m  SELECT "jobs".* FROM "jobs"  ORDER BY created_at DESC
+  Rendered jobs/index.html.haml within layouts/application (2.8ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.2ms)
+
+ActionView::Template::Error (Illegal nesting: content can't be both given on the same line as %div and nested within it.):
+    17:       = link_to "New Job", new_job_path, class: "navbar-text navbar-right navbar-link"
+    18:   .container  
+    19:     .col-md-6, col-md-offset-3
+    20:       = yield
+  app/views/layouts/application.html.haml:20
+
+
+  Rendered /Users/fredypresutto/.rvm/gems/ruby-2.2-head@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.7ms)
+  Rendered /Users/fredypresutto/.rvm/gems/ruby-2.2-head@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered /Users/fredypresutto/.rvm/gems/ruby-2.2-head@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/fredypresutto/.rvm/gems/ruby-2.2-head@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (88.0ms)
+  Rendered /Users/fredypresutto/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/fredypresutto/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/fredypresutto/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/fredypresutto/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/fredypresutto/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (55.2ms)
+  Rendered /Users/fredypresutto/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/fredypresutto/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/fredypresutto/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (125.4ms)
+
+
+Started GET "/" for ::1 at 2015-05-08 11:04:34 -0400
+Processing by JobsController#index as HTML
+  [1m[36mJob Load (0.2ms)[0m  [1mSELECT "jobs".* FROM "jobs"  ORDER BY created_at DESC[0m
+  Rendered jobs/index.html.haml within layouts/application (2.7ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.2ms)
+
+ActionView::Template::Error (Illegal nesting: content can't be both given on the same line as %div and nested within it.):
+    17:       = link_to "New Job", new_job_path, class: "navbar-text navbar-right navbar-link"
+    18:   .container  
+    19:     .col-md-6, col-md-offset-3
+    20:       = yield
+  app/views/layouts/application.html.haml:20
+
+
+  Rendered /Users/fredypresutto/.rvm/gems/ruby-2.2-head@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.2ms)
+  Rendered /Users/fredypresutto/.rvm/gems/ruby-2.2-head@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /Users/fredypresutto/.rvm/gems/ruby-2.2-head@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/fredypresutto/.rvm/gems/ruby-2.2-head@global/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (83.9ms)
+  Rendered /Users/fredypresutto/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/fredypresutto/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/fredypresutto/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/fredypresutto/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/fredypresutto/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (56.5ms)
+  Rendered /Users/fredypresutto/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/fredypresutto/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/fredypresutto/.rvm/gems/ruby-2.2-head/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (129.3ms)
+
+
+Started GET "/" for ::1 at 2015-05-08 11:05:15 -0400
+Processing by JobsController#index as HTML
+  [1m[35mJob Load (0.3ms)[0m  SELECT "jobs".* FROM "jobs"  ORDER BY created_at DESC
+  Rendered jobs/index.html.haml within layouts/application (2.1ms)
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+Completed 200 OK in 96ms (Views: 94.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/jobs.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-08 11:05:15 -0400
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-08 11:05:15 -0400
+
+
+Started GET "/assets/application.self-2af0e0ab7cdbd58a56d9ca3690d44a121b3c9a6e7b082d0efed628ad2af53bd8.css?body=1" for ::1 at 2015-05-08 11:05:15 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-08 11:05:15 -0400
+
+
+Started GET "/assets/bootstrap/affix.self-68d1a5161d04ca9fe1b9d9f4114d9426c7798bf90f2703a97aca35c8113469bb.js?body=1" for ::1 at 2015-05-08 11:05:15 -0400
+
+
+Started GET "/assets/bootstrap/button.self-37c62bff1d75f86f3348b8679873d5156d8b9938b62841038dca21690f4740f1.js?body=1" for ::1 at 2015-05-08 11:05:15 -0400
+
+
+Started GET "/assets/bootstrap/alert.self-15ce09eba576e56db3edfd87accc0ff48823df915169e350b4fd97290f96aee1.js?body=1" for ::1 at 2015-05-08 11:05:15 -0400
+
+
+Started GET "/assets/bootstrap/carousel.self-9aaab1a477b9c1156bab751cb8da47f77dace6da88eef8ae830e60f3cff3a8be.js?body=1" for ::1 at 2015-05-08 11:05:15 -0400
+
+
+Started GET "/assets/bootstrap/collapse.self-eeece00cd06a3d7cc071ab7845b549d4991edd0f0895e4be70fe40bac2fb5f4b.js?body=1" for ::1 at 2015-05-08 11:05:15 -0400
+
+
+Started GET "/assets/bootstrap/dropdown.self-a3998e7ca949c04cb86b5c635deb0abcc7a24dc02e81be66b8acfef02d811e45.js?body=1" for ::1 at 2015-05-08 11:05:15 -0400
+
+
+Started GET "/assets/bootstrap/modal.self-f2759e138605770e60526c00c6d86cbb3378da203641f9d6b204c9f0192b9267.js?body=1" for ::1 at 2015-05-08 11:05:15 -0400
+
+
+Started GET "/assets/bootstrap/scrollspy.self-5ea180afe4404f83fc97d997833f2edefd34475b0b5ddab310e27abc2bbd5f2f.js?body=1" for ::1 at 2015-05-08 11:05:15 -0400
+
+
+Started GET "/assets/bootstrap/tab.self-e1bba7115c90301056ee94c4716de2fcbe4498015def2dab9ff9879f339bd245.js?body=1" for ::1 at 2015-05-08 11:05:15 -0400
+
+
+Started GET "/assets/bootstrap/transition.self-7742dca5e6acf313fbb217811b48468282cddf1a9baea5c89ec92e367ef242cb.js?body=1" for ::1 at 2015-05-08 11:05:15 -0400
+
+
+Started GET "/assets/bootstrap/tooltip.self-c3b5c16f394ab9c0391db4431aac4f2d2ddf1bba4c5d3228ed343de05ecc8e83.js?body=1" for ::1 at 2015-05-08 11:05:15 -0400
+
+
+Started GET "/assets/bootstrap/popover.self-2674d99c3ab0415dba0b958a80b3840f70ff6368b155d890306c0291be49453b.js?body=1" for ::1 at 2015-05-08 11:05:15 -0400
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-05-08 11:05:15 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-05-08 11:05:15 -0400
+
+
+Started GET "/assets/jobs.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-08 11:05:15 -0400
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2015-05-08 11:05:15 -0400
+
+
+Started GET "/jobs?category=Full+Time" for ::1 at 2015-05-08 11:05:17 -0400
+Processing by JobsController#index as HTML
+  Parameters: {"category"=>"Full Time"}
+  [1m[35mCategory Load (0.2ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."name" = ? LIMIT 1  [["name", "Full Time"]]
+  [1m[36mJob Load (0.1ms)[0m  [1mSELECT "jobs".* FROM "jobs" WHERE "jobs"."category_id" = ?  ORDER BY created_at DESC[0m  [["category_id", 1]]
+  Rendered jobs/index.html.haml within layouts/application (1.6ms)
+  [1m[35mCategory Load (0.1ms)[0m  SELECT "categories".* FROM "categories"
+Completed 200 OK in 108ms (Views: 106.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/jobs/1" for ::1 at 2015-05-08 11:05:18 -0400
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mJob Load (0.1ms)[0m  [1mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered jobs/show.html.haml within layouts/application (0.8ms)
+  [1m[35mCategory Load (0.4ms)[0m  SELECT "categories".* FROM "categories"
+Completed 200 OK in 130ms (Views: 128.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/jobs/1/edit" for ::1 at 2015-05-08 11:05:20 -0400
+Processing by JobsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mJob Load (0.2ms)[0m  [1mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCategory Load (0.1ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered jobs/_form.html.haml (82.0ms)
+  Rendered jobs/edit.html.haml within layouts/application (84.2ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+Completed 200 OK in 211ms (Views: 209.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2015-05-08 11:39:12 -0400
+Processing by JobsController#index as HTML
+  [1m[35mJob Load (0.2ms)[0m  SELECT "jobs".* FROM "jobs"  ORDER BY created_at DESC
+  Rendered jobs/index.html.haml within layouts/application (2.5ms)
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+Completed 200 OK in 140ms (Views: 138.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2015-05-08 14:40:00 -0400
+Processing by JobsController#index as HTML
+  [1m[35mJob Load (2.4ms)[0m  SELECT "jobs".* FROM "jobs"  ORDER BY created_at DESC
+  Rendered jobs/index.html.haml within layouts/application (17.0ms)
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+Completed 200 OK in 246ms (Views: 225.1ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/" for ::1 at 2015-05-08 16:25:01 -0400
+Processing by JobsController#index as HTML
+  [1m[35mJob Load (0.8ms)[0m  SELECT "jobs".* FROM "jobs"  ORDER BY created_at DESC
+  Rendered jobs/index.html.haml within layouts/application (2.2ms)
+  [1m[36mCategory Load (0.1ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+Completed 200 OK in 147ms (Views: 145.7ms | ActiveRecord: 0.9ms)
