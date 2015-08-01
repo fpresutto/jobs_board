@@ -1,6 +1,6 @@
 Jobs Board
 
-Simple, personal application in Ruby on Rails.
+Simple, personal application built on Ruby on Rails.
 
 Intructions:
 - Clone project
