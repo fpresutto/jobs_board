@@ -4,5 +4,6 @@ Simple, personal application in Ruby on Rails.
 
 Intructions:
 - Clone project
-- Run rails server on the terminal
+- Rub `bundle install` on the terminal
+- Run `rails server` on the terminal
 - Open localhost:3000 on browser
